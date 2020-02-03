@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { NgwWowService } from "ngx-wow";
 
 @Component({
   selector: "app-home",
@@ -6,11 +7,9 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./home.component.scss"]
 })
 export class HomeComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit() {
-
-    
+  constructor(private wowService: NgwWowService) {
+    this.wowService.init();
   }
-}
 
+  ngOnInit() {}
+}
