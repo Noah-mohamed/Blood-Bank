@@ -1,117 +1,86 @@
 header {
-  .slider-img1 {
-    background-image: url(/assets/images/post-1.jpg);
-    background-size: cover;
-    height: 100vh;
-  }
-  .slider-img2 {
-    background-image: url(/assets/images/post-large-2.jpg);
-    background-size: cover;
-    height: 100vh;
-  }
-
-  .carousel-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.3);
-    transition: 0.5s;
-  }
-
-  .carousel-caption {
-    bottom: 40%;
-    left: 0;
-    right: 0;
-    background: linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 0.3) 0%,
-      rgba(255, 255, 255, 0) 60%
-    );
-    z-index: 1;
-  }
-}
-
-.intro {
-  #intro {
-    animation-duration: 3s;
-    animation-delay: 2s;
-    animation-iteration-count: infinite;
-  }
-  .Quick {
-    position: relative;
-    margin-top: -4em;
-    z-index: 20;
-  }
-  .intro-box {
-    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
-    position: relative;
-    margin-top: -6.8em;
-    z-index: 20;
-  }
-  .intro-btn {
-    padding: 5em;
-  }
-}
-
-.numbers {
-  background-image: url(/assets/images/post-large-5.jpg);
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center center;
-  position: relative;
-
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.3);
-    transition: 0.5s;
-  }
-}
-
-.about {
-  .about-img {
-    z-index: 2;
-  }
-  .about-text {
-    position: relative;
-    margin-top: -6.8em;
-  }
-}
-
-footer {
-  a {
-    color: #fff;
-  }
-  .icon {
-    font-size: x-large;
-    display: block;
-    margin-bottom: 10px;
-  }
-  ul {
-    list-style-type: none;
-    padding: 0px;
-  }
-  .social-icons {
-    li {
-      float: left;
-      border: solid 0.5px gray;
-      border-radius: 50%;
-      padding: 3px 5px;
-      margin-right: 5px;
+    .slider-img1 {
+      background-image: url(/assets/images/post-1.jpg);
+      background-size: cover;
+      height: 100vh;
+    }
+    .slider-img2 {
+      background-image: url(/assets/images/post-large-2.jpg);
+      background-size: cover;
+      height: 100vh;
+    }
+  
+    .carousel-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.3);
+      transition: 0.5s;
+    }
+  
+    .carousel-caption {
+      bottom: 40%;
+      left: 0;
+      right: 0;
+      background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.3) 0%,
+        rgba(255, 255, 255, 0) 60%
+      );
+      z-index: 1;
     }
   }
-
-  .instagram {
-    .insta-img {
-      height: 80px;
-      display: block;
-      width: 33.3333%;
-      float: left;
+  
+  .intro {
+    #intro {
+      animation-duration: 3s;
+      animation-delay: 2s;
+      animation-iteration-count: infinite;
+    }
+    .Quick {
+      position: relative;
+      margin-top: -4em;
+      z-index: 20;
+    }
+    .intro-box {
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+      position: relative;
+      margin-top: -6.8em;
+      z-index: 20;
+    }
+    .intro-btn {
+      padding: 5em;
     }
   }
-}
+  
+  .numbers {
+    background-image: url(/assets/images/post-large-5.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    position: relative;
+  
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.3);
+      transition: 0.5s;
+    }
+  }
+  
+  .about {
+    .about-img {
+      z-index: 2;
+    }
+    .about-text {
+      position: relative;
+      margin-top: -6.8em;
+    }
+  }
+  
+ 

@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'Blood-Bank'`, () => {
+  it(`should have as title 'ttt'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('Blood-Bank');
+    expect(app.title).toEqual('ttt');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('Blood-Bank app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('ttt app is running!');
   });
 });

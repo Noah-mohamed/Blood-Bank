@@ -1,0 +1,28 @@
+.page {
+  height: 100vh;
+  background-image: url(/assets/images/post-large-1.jpg);
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+  }
+
+  .login-form {
+    height: 30em;
+
+    .card {
+      background-color: rgba($color: #fff, $alpha: 0.3);
+      border-radius: 40px;
+      input {
+        border-radius: 25px;
+      }
+    }
+  }
+}

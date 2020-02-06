@@ -1,0 +1,87 @@
+<!-- header -->
+<header>
+  <div class="container">
+    <div class="header-overlay"></div>
+    <div class="row justify-content-center align-items-center">
+      <div class="col-md-9 my-3">
+        <h5>BLOOD BANK MANAGMENT SYSTEM</h5>
+        <h4>ADMIN CONTROL PANEL</h4>
+      </div>
+      <div class="col-md-3 my-3  text-right">
+        <button class="btn btn-light">switch To User Site</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- data board -->
+<section class="board ">
+  <div class="container-fluid">
+    <div class="row">
+      <!-- left fixed section of options -->
+      <div class="col-lg-2 col-md-3 bg-secondary board-options">
+        <div>
+          <ul class="board-links">
+            <li>
+              <a href="#"
+                ><i class="fa fa-check" aria-hidden="true"></i> Inputs Data</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fa fa-check" aria-hidden="true"></i> Camps</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fa fa-check" aria-hidden="true"></i> Available
+                Blood</a
+              >
+            </li>
+            <div class="clearfix"></div>
+          </ul>
+        </div>
+      </div>
+
+      <!-- board routing here -->
+      <div class="col-lg-10 col-md-9">
+        <app-admin-input-data></app-admin-input-data>
+        <app-admin-camps></app-admin-camps>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- other details model -->
+
+<!-- Button trigger modal -->
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">name</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>location</p>
+        <p>phone</p>
+        <p>mail</p>
+        <p>date</p>
+      </div>
+    </div>
+  </div>
+</div>

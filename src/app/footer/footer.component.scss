@@ -1,0 +1,32 @@
+footer {
+  a {
+    color: #fff;
+  }
+  .icon {
+    font-size: x-large;
+    display: block;
+    margin-bottom: 10px;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0px;
+  }
+  .social-icons {
+    li {
+      float: left;
+      border: solid 0.5px gray;
+      border-radius: 50%;
+      padding: 3px 5px;
+      margin-right: 5px;
+    }
+  }
+
+  .instagram {
+    .insta-img {
+      height: 80px;
+      display: block;
+      width: 33.3333%;
+      float: left;
+    }
+  }
+}
