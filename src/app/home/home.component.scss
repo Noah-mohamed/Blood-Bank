@@ -1,4 +1,32 @@
 header {
+  .carousel {
+    .carousel-control-next,
+    .carousel-control-prev {
+      width: 25px;
+      right: 1%;
+      transform: scale(2);
+    }
+    .carousel-control-prev {
+      right: auto;
+      left: 1%;
+    }
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      background-image: none;
+      transition: all 0.5s;
+      transition-delay: 0s;
+    }
+
+    .carousel-control-next:hover .carousel-control-next-icon {
+      margin-left: 8px;
+      color: #ffca08;
+    }
+
+    .carousel-control-prev:hover .carousel-control-prev-icon {
+      margin-right: 8px;
+      color: #ffca08;
+    }
+
     .slider-img1 {
       background-image: url(/assets/images/post-1.jpg);
       background-size: cover;
@@ -9,7 +37,7 @@ header {
       background-size: cover;
       height: 100vh;
     }
-  
+
     .carousel-overlay {
       position: absolute;
       top: 0;
@@ -19,9 +47,9 @@ header {
       background: rgba(0, 0, 0, 0.3);
       transition: 0.5s;
     }
-  
+
     .carousel-caption {
-      bottom: 40%;
+      bottom: 60%;
       left: 0;
       right: 0;
       background: linear-gradient(
@@ -32,55 +60,54 @@ header {
       z-index: 1;
     }
   }
-  
-  .intro {
-    #intro {
-      animation-duration: 3s;
-      animation-delay: 2s;
-      animation-iteration-count: infinite;
-    }
-    .Quick {
-      position: relative;
-      margin-top: -4em;
-      z-index: 20;
-    }
-    .intro-box {
-      box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
-      position: relative;
-      margin-top: -6.8em;
-      z-index: 20;
-    }
-    .intro-btn {
-      padding: 5em;
-    }
+}
+
+.intro {
+  #intro {
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
   }
-  
-  .numbers {
-    background-image: url(/assets/images/post-large-5.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center center;
+  .Quick {
     position: relative;
-  
-    .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.3);
-      transition: 0.5s;
-    }
+    margin-top: -4em;
+    z-index: 20;
   }
-  
-  .about {
-    .about-img {
-      z-index: 2;
-    }
-    .about-text {
-      position: relative;
-      margin-top: -6.8em;
-    }
+  .intro-box {
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    position: relative;
+    margin-top: -6.8em;
+    z-index: 20;
   }
-  
- 
+  .intro-btn {
+    padding: 5em;
+  }
+}
+
+.numbers {
+  background-image: url(/assets/images/post-large-5.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  position: relative;
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    transition: 0.5s;
+  }
+}
+
+.about {
+  .about-img {
+    z-index: 2;
+  }
+  .about-text {
+    position: relative;
+    margin-top: -6.8em;
+  }
+}
