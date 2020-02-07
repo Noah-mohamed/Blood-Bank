@@ -12,7 +12,11 @@ import { AdminCampsComponent } from "./admin-camps/admin-camps.component";
 import { AdminLoginComponent } from "./admin-login/admin-login.component";
 import { AdminPageComponent } from "./admin-page/admin-page.component";
 import { AdminInputDataComponent } from "./admin-input-data/admin-input-data.component";
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from "./login/login.component";
+import { RequisitionsComponent } from "./requisitions/requisitions.component";
+import { AvailBloodComponent } from "./avail-blood/avail-blood.component";
+import { AvailBloodEditComponent } from "./avail-blood-edit/avail-blood-edit.component";
+import { UserCampsComponent } from "./user-camps/user-camps.component";
 
 @NgModule({
   declarations: [
@@ -26,7 +30,11 @@ import { LoginComponent } from './login/login.component';
     AdminLoginComponent,
     AdminPageComponent,
     AdminInputDataComponent,
-    LoginComponent
+    LoginComponent,
+    RequisitionsComponent,
+    AvailBloodComponent,
+    AvailBloodEditComponent,
+    UserCampsComponent
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

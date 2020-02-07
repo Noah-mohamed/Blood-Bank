@@ -15,8 +15,12 @@
     </button>
     <div class="collapse navbar-collapse" id="collapsibleNavId">
       <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-        <li class="nav-item active">
-          <a class="nav-link" href="#"
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="#"
+            [routerLink]="['']"
+            routerLinkActive="active"
             >Home <span class="sr-only">(current)</span></a
           >
         </li>
@@ -34,13 +38,37 @@
             >Bank Data</a
           >
           <div class="dropdown-menu" aria-labelledby="dropdownId">
-            <a class="dropdown-item" href="#">Current Requests</a>
-            <a class="dropdown-item" href="#">Doners</a>
-            <a class="dropdown-item" href="#">Available Blood</a>
+            <a
+              class="dropdown-item"
+              href="#"
+              [routerLink]="['/bankData/requisitions']"
+              routerLinkActive="active"
+              >Current Requests</a
+            >
+            <a
+              class="dropdown-item"
+              href="#"
+              [routerLink]="['/bankData/doners']"
+              routerLinkActive="active"
+              >Doners</a
+            >
+            <a
+              class="dropdown-item"
+              href="#"
+              [routerLink]="['/bankData/bank']"
+              routerLinkActive="active"
+              >Available Blood</a
+            >
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">camps</a>
+          <a
+            class="nav-link"
+            href="#"
+            [routerLink]="['/Camps']"
+            routerLinkActive="active"
+            >camps</a
+          >
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#"> Contact Us</a>

@@ -1,5 +1,4 @@
-
-// bankdata 
+// bankdata
 header {
   position: relative;
   background-image: url(/assets/images/post-large-2.jpg);
@@ -60,23 +59,5 @@ header {
       rgba(0, 0, 0, 0.05) 0%,
       rgba(255, 255, 255, 0) 60%
     );
-  }
-
-  table {
-    thead {
-      th {
-        border-top: none;
-        border-bottom: 1px solid #dee2e6;
-      }
-    }
-    tbody {
-      th,
-      td {
-        border-top: none;
-      }
-      tr:hover {
-        background-color: rgba(0, 0, 0, 0.05);
-      }
-    }
   }
 }
