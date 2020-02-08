@@ -20,7 +20,8 @@ const routes: Routes = [
   { path: "bankData/doners", component: DonersComponent },
   { path: "bankData/requisitions", component: RequisitionsComponent },
   { path: "bankData/bank", component: AvailBloodComponent },
-  { path: "Camps", component: UserCampsComponent }
+  { path: "Camps", component: UserCampsComponent },
+  { path: "CampsEdit", component: AdminCampsComponent }
 ];
 
 @NgModule({

@@ -1,18 +1,15 @@
-import { Component, OnInit } from "@angular/core";
-import { FormGroup, FormControl } from "@angular/forms";
-import { CampsService } from "../camps.service";
+import { Injectable } from "@angular/core";
+import { FormControl, FormGroup } from "@angular/forms";
 
-@Component({
-  selector: "app-admin-camps",
-  templateUrl: "./admin-camps.component.html",
-  styleUrls: ["./admin-camps.component.scss"]
+@Injectable({
+  providedIn: "root"
 })
-export class AdminCampsComponent implements OnInit {
-  createMode = true;
+export class CampsService {
+    createMode = true;
   editMode = false;
   campsCont: any[] = [];
   selectedIndex;
-
+camps:any[]
   campData = new FormGroup({
     campTitle: new FormControl(""),
     campOrganizer: new FormControl(""),
@@ -21,9 +18,6 @@ export class AdminCampsComponent implements OnInit {
     campCity: new FormControl(""),
     campComment: new FormControl("")
   });
-
-
-
 
   submit() {
     if (this.editMode == true) {
@@ -57,7 +51,8 @@ export class AdminCampsComponent implements OnInit {
     this.createMode = true;
   }
 
-  constructor(_CampsService: CampsService) {}
 
-  ngOnInit() {}
+
+
+  constructor() {}
 }

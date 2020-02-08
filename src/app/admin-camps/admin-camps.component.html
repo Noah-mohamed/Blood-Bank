@@ -1,129 +1,192 @@
-<!-- title -->
+<div class="container">
+  <div class="card my-5 shadow">
+    <div class="card-body p-0">
+      <h4 class="card-title m-4 d-flex align-items-center ">
+        Camps
+      </h4>
+      <div class="title-end-shadow"></div>
 
-<div class="card my-5 shadow">
-  <div class="card-body p-0">
-    <h4 class="card-title m-4 d-flex align-items-center ">
-      Camps
-    </h4>
-    <div class="title-end-shadow"></div>
-
-    <!-- end of title -->
-    <div class="card-text m-4">
-      <!--add camps inputs -->
-      <div class="camp-inputs">
-        <div class="form-group">
-          <label for="">camp title</label>
-          <input
-            type="text"
-            class="form-control"
-            name=""
-            id=""
-            aria-describedby="helpId"
-            placeholder=""
-          />
-        </div>
-        <div class="form-group">
-          <label for="">Organizer</label>
-          <input
-            type="text"
-            class="form-control"
-            name=""
-            id=""
-            aria-describedby="helpId"
-            placeholder=""
-          />
-        </div>
-
-        <div class="row">
-          <div class="col">
+      <!-- end of title -->
+      <div class="card-text m-4">
+        <!--add camps inputs -->
+        <form [formGroup]="campData" (ngSubmit)="submit()">
+          <div class="camp-inputs">
             <div class="form-group">
-              <label for="">state</label>
-              <select class="form-control " name="" id="">
-                <option>egypt</option>
-                <option>usa</option>
-                <option>china</option>
-              </select>
+              <label for="">camp title</label>
+              <input
+                formControlName="campTitle"
+                type="text"
+                class="form-control"
+                name=""
+                id=""
+                aria-describedby="helpId"
+                placeholder=""
+              />
+            </div>
+            <div class="form-group">
+              <label for="">Organizer</label>
+              <input
+                formControlName="campOrganizer"
+                type="text"
+                class="form-control"
+                name=""
+                id=""
+                aria-describedby="helpId"
+                placeholder=""
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="">phone number</label>
+              <input
+                formControlName="campPhone"
+                type="text"
+                class="form-control "
+                name=""
+                id=""
+                aria-describedby="helpId"
+                placeholder=""
+              />
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <div class="form-group">
+                  <label for="">state</label>
+                  <select
+                    formControlName="campState"
+                    class="form-control "
+                    name=""
+                    id=""
+                  >
+                    <option>egypt</option>
+                    <option>usa</option>
+                    <option>china</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-group">
+                  <label for="">cities</label>
+                  <select
+                    formControlName="campCity"
+                    class="form-control "
+                    name=""
+                    id=""
+                  >
+                    <option>cairo</option>
+                    <option>giza</option>
+                    <option>alex</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="">comment</label>
+              <textarea
+                formControlName="campComment"
+                type="text"
+                class="form-control "
+                name=""
+                id=""
+                aria-describedby="helpId"
+                placeholder=""
+              ></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="">upload photo</label>
+              <input
+                type="file"
+                class="form-control-file "
+                name=""
+                id=""
+                placeholder=""
+                aria-describedby="fileHelpId"
+              />
             </div>
           </div>
-          <div class="col">
-            <div class="form-group">
-              <label for="">cities</label>
-              <select class="form-control " name="" id="">
-                <option></option>
-                <option></option>
-                <option></option>
-              </select>
+          <hr />
+
+          <button
+            *ngIf="editMode == false"
+            type="submit"
+            class="btn btn-primary float-right"
+          >
+            add camp
+          </button>
+          <button
+            *ngIf="editMode == true"
+            type="submit"
+            class="btn btn-warning float-right"
+          >
+            Edit camp
+          </button>
+          <a
+            *ngIf="editMode == true"
+            (click)="cancleEdit()"
+            class="btn btn-danger float-right mr-2 text-white"
+          >
+            Cancle Edit
+          </a>
+          <div class="clearfix"></div>
+        </form>
+
+        <!-- display camps -->
+
+        <div *ngFor="let camp of campsCont; let i = index" class="card my-5">
+          <div class="row  m-0">
+            <div class="col-lg-6 card-photo p-0 ">
+              <img
+                class="img-fluid rounded-left  "
+                src="/assets/images/post-large-5.jpg"
+                alt=""
+              />
             </div>
-          </div>
-        </div>
 
-        <div class="form-group">
-          <label for="">phone number</label>
-          <input
-            type="text"
-            class="form-control "
-            name=""
-            id=""
-            aria-describedby="helpId"
-            placeholder=""
-          />
-        </div>
+            <div class="col-lg-6 p-0  d-flex flex-column">
+              <div class="card-body ml-3">
+                <!-- delete -->
+                <button
+                  (click)="deleteCamp(i)"
+                  type="button"
+                  class="close"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                <!-- - -->
+                <!-- edit -->
+                <button
+                  (click)="editCamp(i, camp)"
+                  type="button"
+                  class="close  mr-2"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true"
+                    ><small><i class="fas fa-edit    "></i></small
+                  ></span>
+                </button>
+                <!-- - -->
 
-        <div class="form-group">
-          <label for="">upload photo</label>
-          <input
-            type="file"
-            class="form-control-file "
-            name=""
-            id=""
-            placeholder=""
-            aria-describedby="fileHelpId"
-          />
-        </div>
-      </div>
-      <hr />
+                <h4 class="card-title mb-1">{{ camp.campTitle }}</h4>
+                <hr class="w-75 ml-0" />
+                <span> {{ camp.campState }} </span> ,
+                <span> {{ camp.campCity }} </span>
+                <p class="my-3">
+                  <i class="fa fa-phone" aria-hidden="true"></i>
+                  {{ camp.campPhone }}
+                </p>
 
-      <button class="btn btn-primary float-right">add camp</button>
-      <div class="clearfix"></div>
-
-      <!-- display camps -->
-
-      <div class="card my-5">
-        <div class="row">
-          <div class="col-sm-6">
-            <img
-              class="img-fluid rounded-left "
-              src="/assets/images/post-large-5.jpg"
-              alt=""
-            />
-          </div>
-
-          <div class="card-body">
-            <h4 class="card-title mb-1">Camp Title</h4>
-            <span>city</span> ,
-            <span>state</span>
-
-            <p class="card-text mt-3">comment</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="card my-5">
-        <div class="row">
-          <div class="col-sm-6">
-            <img
-              class="img-fluid rounded-left "
-              src="/assets/images/post-large-5.jpg"
-              alt=""
-            />
-          </div>
-
-          <div class="card-body">
-            <h4 class="card-title mb-1">Camp Title</h4>
-            <span>city</span> ,
-            <span>state</span>
-
-            <p class="card-text mt-3">comment</p>
+                <p class="card-text mt-3">
+                  {{ camp.campComment }}
+                </p>
+              </div>
+              <div class="card-footer  text-muted">
+                <span> Organized by : {{ camp.campOrganizer }}</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>

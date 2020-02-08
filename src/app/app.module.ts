@@ -17,6 +17,7 @@ import { RequisitionsComponent } from "./requisitions/requisitions.component";
 import { AvailBloodComponent } from "./avail-blood/avail-blood.component";
 import { AvailBloodEditComponent } from "./avail-blood-edit/avail-blood-edit.component";
 import { UserCampsComponent } from "./user-camps/user-camps.component";
+import {ReactiveFormsModule} from "@angular/forms"
 
 @NgModule({
   declarations: [
@@ -36,7 +37,7 @@ import { UserCampsComponent } from "./user-camps/user-camps.component";
     AvailBloodEditComponent,
     UserCampsComponent
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule,ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent]
 })
