@@ -1,6 +1,5 @@
 import { Component, OnInit } from "@angular/core";
 import { FormGroup, FormControl } from "@angular/forms";
-import { CampsService } from "../camps.service";
 
 @Component({
   selector: "app-admin-camps",
@@ -21,9 +20,6 @@ export class AdminCampsComponent implements OnInit {
     campCity: new FormControl(""),
     campComment: new FormControl("")
   });
-
-
-
 
   submit() {
     if (this.editMode == true) {
@@ -57,7 +53,7 @@ export class AdminCampsComponent implements OnInit {
     this.createMode = true;
   }
 
-  constructor(_CampsService: CampsService) {}
+  constructor() {}
 
   ngOnInit() {}
 }
