@@ -55,5 +55,10 @@ export class AdminCampsComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    // $(window).ready(function() {
+    //   $(".navbar").removeClass("fixed-top");
+    //   $(".navbar").addClass("bg-dark");
+    // });
+  }
 }

@@ -16,6 +16,7 @@ import { AvailBloodEditComponent } from "./avail-blood-edit/avail-blood-edit.com
 import { UserCampsComponent } from "./user-camps/user-camps.component";
 
 const routes: Routes = [
+  { path: "", component: HomeComponent },
   { path: "home", component: HomeComponent },
   { path: "bankData/doners", component: DonersComponent },
   { path: "bankData/requisitions", component: RequisitionsComponent },

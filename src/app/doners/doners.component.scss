@@ -22,33 +22,7 @@ header {
   }
 }
 
-.board {
-  .board-links {
-    list-style-type: none;
-    padding-left: 5px;
-    li {
-      margin: 20px 0;
-    }
-    a {
-      color: #fff;
-    }
-    .icon {
-      font-size: x-large;
-      display: block;
-      margin-bottom: 10px;
-    }
-  }
 
-  @media (max-width: 768px) {
-    ul {
-      display: flex;
-      justify-content: center;
-    }
-    li {
-      margin: 10px 20px 0px !important;
-    }
-  }
-}
 // end of bank data
 
 .card {
@@ -62,7 +36,9 @@ header {
     );
   }
 
+
   table {
+    color: #576271;
     thead {
       th {
         border-top: none;
@@ -73,6 +49,7 @@ header {
       th,
       td {
         border-top: none;
+        font-weight: 400;
       }
       tr:hover {
         background-color: rgba(0, 0, 0, 0.05);

@@ -12,13 +12,60 @@ footer {
     padding: 0px;
   }
   .social-icons {
-    li {
-      float: left;
-      border: solid 0.5px gray;
-      border-radius: 50%;
-      padding: 3px 5px;
-      margin-right: 5px;
+    ul {
+      li {
+        float: left;
+        border: solid 0.5px gray;
+        border-radius: 50%;
+        padding: 3px 5px;
+        margin-right: 5px;
+      }
     }
+  }
+
+  .contact-information {
+    background-color: #1e2022;
+    a,
+    p {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 14px;
+    }
+  }
+
+  .middle-footer {
+    font-size: 15px;
+    line-height: 1.7;
+    h4 {
+      margin: 20px 0 30px;
+      font-size: 13px;
+      color: #e6e6e6;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      font-weight: 700;
+    }
+    p {
+      color: rgba(255, 255, 255, 0.6) !important;
+    }
+    a {
+      color: rgba(255, 255, 255, 0.9);
+    }
+    .phones {
+      i {
+        margin-right: 10px;
+      }
+    }
+    background-color: #25282a;
+  }
+  .footer-links {
+    a {
+      i {
+        font-size: 8px;
+        margin-right: 10px;
+      }
+    }
+  }
+  .copy {
+    background-color: #f7b633;
   }
 
   .instagram {

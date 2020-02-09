@@ -194,3 +194,19 @@ ul {
     }
   }
 }
+
+@media (max-width: 767px) {
+  .navbar-collapse {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    padding: 10px;
+    ul {
+      margin: auto;
+      display: block;
+      li {
+        float: left;
+        margin: 0 10px;
+      }
+    }
+  }
+}

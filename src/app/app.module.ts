@@ -1,6 +1,6 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
-
+import * as $ from "jquery";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { HomeComponent } from "./home/home.component";
@@ -17,7 +17,7 @@ import { RequisitionsComponent } from "./requisitions/requisitions.component";
 import { AvailBloodComponent } from "./avail-blood/avail-blood.component";
 import { AvailBloodEditComponent } from "./avail-blood-edit/avail-blood-edit.component";
 import { UserCampsComponent } from "./user-camps/user-camps.component";
-import {ReactiveFormsModule} from "@angular/forms"
+import { ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -37,7 +37,7 @@ import {ReactiveFormsModule} from "@angular/forms"
     AvailBloodEditComponent,
     UserCampsComponent
   ],
-  imports: [BrowserModule, AppRoutingModule,ReactiveFormsModule],
+  imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent]
 })
