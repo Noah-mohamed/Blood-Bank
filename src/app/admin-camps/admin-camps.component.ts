@@ -36,7 +36,7 @@ export class AdminCampsComponent implements OnInit {
   }
 
   editCamp(index, camp) {
-    // $("body,html").animate({ scrollTop: 0 }, 600);
+    $("body,html").animate({ scrollTop: 0 }, 600);
     this.editMode = true;
     this.createMode = false;
     this.campData.controls["campTitle"].setValue(camp.campTitle);
@@ -56,9 +56,9 @@ export class AdminCampsComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    // $(window).ready(function() {
-    //   $(".navbar").removeClass("fixed-top");
-    //   $(".navbar").addClass("bg-dark");
-    // });
+    $(window).ready(function() {
+      $(".navbar").removeClass("fixed-top");
+      $(".navbar").addClass("bg-dark");
+    });
   }
 }
