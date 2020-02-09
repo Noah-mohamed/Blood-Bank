@@ -1,5 +1,4 @@
-
-// bankdata 
+// bankdata
 header {
   position: relative;
   background-image: url(/assets/images/post-large-2.jpg);
@@ -22,7 +21,6 @@ header {
   }
 }
 
-
 // end of bank data
 
 .card {
@@ -35,7 +33,6 @@ header {
       rgba(255, 255, 255, 0) 60%
     );
   }
-
 
   table {
     color: #576271;
@@ -55,5 +52,12 @@ header {
         background-color: rgba(0, 0, 0, 0.05);
       }
     }
+  }
+}
+
+@media (max-width: 767px) {
+  table,
+  button {
+    font-size: smaller;
   }
 }
