@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { FormGroup, FormControl } from "@angular/forms";
+import { CampsService } from "../camps.service";
 
 @Component({
   selector: "app-admin-camps",
@@ -11,7 +12,7 @@ export class AdminCampsComponent implements OnInit {
   editMode = false;
   campsCont: any[] = [];
   selectedIndex;
-
+  camps: object[] = [];
   campData = new FormGroup({
     campTitle: new FormControl(""),
     campOrganizer: new FormControl(""),
@@ -48,12 +49,18 @@ export class AdminCampsComponent implements OnInit {
     this.selectedIndex = index;
   }
 
+  campDataa = ["noah", "mohamed"];
+  
   cancleEdit() {
     this.editMode = false;
     this.createMode = true;
   }
 
-  constructor() {}
+  constructor(_CampsService: CampsService) {
+    this.camps.push(this.campDataa);
+    _CampsService.camps = this.camps;
+    console.log(_CampsService.camps);
+  }
 
   ngOnInit() {
     $(window).ready(function() {

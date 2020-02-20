@@ -28,12 +28,13 @@ header {
     }
 
     .slider-img1 {
-      background-image: url(/assets/images/post-1.jpg);
+      background-image: url(/assets/images/blood1.jpg);
       background-size: cover;
+      background-position: center;
       height: 100vh;
     }
     .slider-img2 {
-      background-image: url(/assets/images/post-large-2.jpg);
+      background-image: url(/assets/images/blood2.jpg);
       background-size: cover;
       height: 100vh;
     }
@@ -44,12 +45,12 @@ header {
       left: 0;
       right: 0;
       bottom: 0;
-      background: rgba(0, 0, 0, 0.3);
+      background: rgba(0, 0, 0, 0.4);
       transition: 0.5s;
     }
 
     .carousel-caption {
-      bottom: 60%;
+      bottom: 50%;
       left: 0;
       right: 0;
       background: linear-gradient(
@@ -58,6 +59,14 @@ header {
         rgba(255, 255, 255, 0) 60%
       );
       z-index: 1;
+    }
+    .aa {
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(0, 0, 0, 0.3) 50%,
+        rgba(255, 255, 255, 0) 100%
+      );
     }
   }
 }
